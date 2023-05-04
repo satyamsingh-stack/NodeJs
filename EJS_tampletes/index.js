@@ -30,4 +30,8 @@ app.get("/login",(req,resp)=>{
     resp.render("login");
 })
 
+app.get("*",(req,resp)=>{
+    resp.sendFile(dirpath+"/page.html");
+})
+
 app.listen(5000);
